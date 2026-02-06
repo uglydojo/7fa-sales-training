@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Sales Framework - The Boulder Analogy | Seven Figure Agency</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .sfa-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .sfa-brand {
+            font-size: 0.9rem;
+            letter-spacing: 3px;
+            color: #cc0000;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #fff;
+        }
+
+        h1 span {
+            color: #cc0000;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        /* Boulder Hill Visual */
+        .hill-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            margin-bottom: 60px;
+            background: rgba(255,255,255,0.02);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .hill {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 300px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+            clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        }
+
+        .boulder {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle at 30% 30%, #ff4444, #cc0000);
+            border-radius: 50%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .boulder-wrong {
+            bottom: 220px;
+            left: 25%;
+            animation: struggle 0.5s ease-in-out infinite;
+        }
+
+        .boulder-right {
+            bottom: 280px;
+            right: 28%;
+        }
+
+        @keyframes struggle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(5px); }
+        }
+
+        .person {
+            position: absolute;
+            font-size: 50px;
+        }
+
+        .salesperson-wrong {
+            bottom: 180px;
+            left: 20%;
+        }
+
+        .prospect-wrong {
+            bottom: 100px;
+            left: 15%;
+            opacity: 0.5;
+        }
+
+        .salesperson-right {
+            bottom: 100px;
+            right: 15%;
+            opacity: 0.7;
+        }
+
+        .prospect-right {
+            bottom: 240px;
+            right: 23%;
+        }
+
+        .label-box {
+            position: absolute;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .wrong-label {
+            background: rgba(204, 0, 0, 0.9);
+            bottom: 50px;
+            left: 10%;
+            width: 200px;
+        }
+
+        .right-label {
+            background: rgba(46, 213, 115, 0.9);
+            bottom: 50px;
+            right: 10%;
+            width: 200px;
+        }
+
+        .arrow {
+            position: absolute;
+            font-size: 30px;
+        }
+
+        .arrow-wrong {
+            bottom: 200px;
+            left: 28%;
+            transform: rotate(-45deg);
+            color: #cc0000;
+        }
+
+        .arrow-right {
+            bottom: 260px;
+            right: 26%;
+            transform: rotate(-45deg);
+            color: #2ed573;
+        }
+
+        /* Core Principle */
+        .principle-box {
+            background: linear-gradient(135deg, #cc0000, #990000);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: 0 10px 40px rgba(204, 0, 0, 0.3);
+        }
+
+        .principle-box h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .principle-box p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #cc0000;
+            font-size: 1.5rem;
+        }
+
+        /* Framework Steps */
+        .framework {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .step {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 4px solid;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .step:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .step h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .step p {
+            font-size: 0.9rem;
+            color: #ccc;
+            line-height: 1.5;
+        }
+
+        .step.missed {
+            border-color: #cc0000;
+            background: rgba(204, 0, 0, 0.1);
+        }
+
+        .step.missed .step-number {
+            background: #cc0000;
+        }
+
+        .step.done {
+            border-color: #2ed573;
+        }
+
+        .step.done .step-number {
+            background: #2ed573;
+        }
+
+        /* Comparison Table */
+        .comparison {
+            background: rgba(255,255,255,0.03);
+            border-radius: 15px;
+            overflow: hidden;
+            margin-bottom: 50px;
+            border: 1px solid #333;
+        }
+
+        .comparison h2 {
+            background: rgba(255,255,255,0.05);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .comparison-col {
+            padding: 25px;
+        }
+
+        .comparison-col.wrong {
+            background: rgba(204, 0, 0, 0.1);
+            border-right: 2px solid rgba(204, 0, 0, 0.3);
+        }
+
+        .comparison-col.right {
+            background: rgba(46, 213, 115, 0.1);
+        }
+
+        .comparison-col h3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        .comparison-col.wrong h3 {
+            color: #ff6b6b;
+        }
+
+        .comparison-col.right h3 {
+            color: #2ed573;
+        }
+
+        .comparison-col ul {
+            list-style: none;
+        }
+
+        .comparison-col li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.95rem;
+        }
+
+        .comparison-col li:last-child {
+            border-bottom: none;
+        }
+
+        .icon {
+            font-size: 1.2rem;
+        }
+
+        /* Key Questions */
+        .questions-section {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 50px;
+        }
+
+        .questions-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #cc0000;
+        }
+
+        .question-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .question-card {
+            background: rgba(0,0,0,0.3);
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #333;
+        }
+
+        .question-card h4 {
+            color: #cc0000;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .question-card p {
+            font-size: 1rem;
+            font-style: italic;
+            color: #ccc;
+            margin-bottom: 8px;
+        }
+
+        /* Call Flow */
+        .flow-section {
+            margin-bottom: 50px;
+        }
+
+        .flow-section h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #cc0000;
+        }
+
+        .flow {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .flow-item {
+            background: rgba(255,255,255,0.05);
+            padding: 15px 20px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+            border: 1px solid #333;
+        }
+
+        .flow-item.critical {
+            background: linear-gradient(135deg, #cc0000, #990000);
+            font-weight: bold;
+            border: none;
+        }
+
+        .flow-arrow {
+            color: #cc0000;
+            font-size: 1.5rem;
+        }
+
+        /* Fatal Mistake Box */
+        .fatal-box {
+            background: linear-gradient(135deg, #990000, #660000);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            margin-bottom: 50px;
+            border: 2px solid #cc0000;
+        }
+
+        .fatal-box h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .fatal-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .fatal-box strong {
+            color: #ffcc00;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            border-top: 1px solid #333;
+        }
+
+        .footer .quote {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 10px;
+        }
+
+        .sfa-footer-brand {
+            color: #cc0000;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .hill-container {
+                height: 300px;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-col.wrong {
+                border-right: none;
+                border-bottom: 2px solid rgba(204, 0, 0, 0.3);
+            }
+
+            .label-box {
+                font-size: 0.85rem;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="sfa-header">
+            <div class="sfa-brand">SEVEN FIGURE AGENCY</div>
+            <h1>THE <span>BOULDER</span> ANALOGY</h1>
+            <p class="subtitle">Sales Framework - Visual Training Guide</p>
+        </div>
+
+        <!-- Boulder Hill Visual -->
+        <div class="hill-container">
+            <div class="hill"></div>
+
+            <!-- Wrong Side -->
+            <div class="boulder boulder-wrong"></div>
+            <div class="person salesperson-wrong">🧑‍💼</div>
+            <div class="person prospect-wrong">🧍</div>
+            <div class="arrow arrow-wrong">⬆️</div>
+            <div class="label-box wrong-label">
+                ❌ YOU Push<br>
+                <small>They watch</small>
+            </div>
+
+            <!-- Right Side -->
+            <div class="boulder boulder-right"></div>
+            <div class="person salesperson-right">🧑‍💼</div>
+            <div class="person prospect-right">🧍</div>
+            <div class="arrow arrow-right">⬆️</div>
+            <div class="label-box right-label">
+                ✅ THEY Push<br>
+                <small>You guide at the top</small>
+            </div>
+        </div>
+
+        <!-- Core Principle -->
+        <div class="principle-box">
+            <h2>THE CORE RULE</h2>
+            <p>When YOU sell, convince, and push — the prospect sits back and watches you work.<br>
+            When THEY push — they're invested. They earn the close.<br><br>
+            <strong>Your job: Ask questions. Let them sell themselves. Tie it down at the top.</strong></p>
+        </div>
+
+        <!-- What Was Missed -->
+        <h2 class="section-header">🚨 WHAT GOT MISSED ON THE CALL</h2>
+
+        <div class="framework">
+            <div class="step missed">
+                <span class="step-number">1</span>
+                <h3>WHY CHAIN</h3>
+                <p>Prospect said "$50K/month" — never asked WHY. What does that number mean? What happens if he doesn't hit it? No emotional depth.</p>
+            </div>
+
+            <div class="step missed">
+                <span class="step-number">2</span>
+                <h3>CLOSE DOORS</h3>
+                <p>Prospect mentioned 2 failed programs. Never closed that door. Never asked "What DID work from those?" Never asked about budget or timeline.</p>
+            </div>
+
+            <div class="step missed">
+                <span class="step-number">3</span>
+                <h3>TIE DOWNS</h3>
+                <p>Prospect said "retention isn't there," "need to push on the gas," "lost momentum." None of these were used later to create urgency.</p>
+            </div>
+
+            <div class="step missed">
+                <span class="step-number">4</span>
+                <h3>TEMP CHECK #1</h3>
+                <p>Never asked "On a scale of 1-10, putting price aside, does this solve your problem?" Went straight to price.</p>
+            </div>
+
+            <div class="step missed">
+                <span class="step-number">5</span>
+                <h3>TEMP CHECK #2</h3>
+                <p>After price, never asked "Now that you know the investment, where are you 1-10?" No chance to handle objections.</p>
+            </div>
+
+            <div class="step missed">
+                <span class="step-number">6</span>
+                <h3>ADT FRAMEWORK</h3>
+                <p>Prospect said "I'm not doing that today." Response was "Sounds good, man." No Agree → Duplicate → Transition.</p>
+            </div>
+        </div>
+
+        <!-- Comparison -->
+        <div class="comparison">
+            <h2>❌ What Happened vs ✅ What Should Happen</h2>
+            <div class="comparison-grid">
+                <div class="comparison-col wrong">
+                    <h3><span class="icon">❌</span> The Call</h3>
+                    <ul>
+                        <li><span class="icon">🗣️</span> Asked "Do you think you can get there yourself?" — Prospect said YES</li>
+                        <li><span class="icon">🎁</span> Gave free consulting on niching without tying to offer</li>
+                        <li><span class="icon">😴</span> Prospect never expressed pain, urgency, or frustration</li>
+                        <li><span class="icon">🚪</span> Prospect said no, closer said "Sounds good"</li>
+                        <li><span class="icon">📋</span> Ran a discovery call, not a sales call</li>
+                    </ul>
+                </div>
+                <div class="comparison-col right">
+                    <h3><span class="icon">✅</span> Framework Says</h3>
+                    <ul>
+                        <li><span class="icon">🔍</span> "Why $50K? What does that mean for you? What if you DON'T hit it?"</li>
+                        <li><span class="icon">🔗</span> "That's exactly what we help with in the program..."</li>
+                        <li><span class="icon">🔥</span> Amplify pain: "Tell me about that churn. What did it cost you?"</li>
+                        <li><span class="icon">🎯</span> ADT: "I get it. Is there anything ELSE stopping you?"</li>
+                        <li><span class="icon">💰</span> Assumptive close: "Visa, MasterCard, or AmEx?"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Questions to Never Skip -->
+        <div class="questions-section">
+            <h2>🔑 QUESTIONS YOU MUST ASK</h2>
+            <div class="question-grid">
+                <div class="question-card">
+                    <h4>The Why Chain</h4>
+                    <p>"Why is that number important to you?"</p>
+                    <p>"What happens if you DON'T hit that goal?"</p>
+                    <p>"What does that mean for your family/life?"</p>
+                </div>
+                <div class="question-card">
+                    <h4>Close the Doors</h4>
+                    <p>"Are you the only decision maker?"</p>
+                    <p>"If this is a fit, are you in a position to move forward today?"</p>
+                    <p>"You mentioned [past program] — what DID work from that?"</p>
+                </div>
+                <div class="question-card">
+                    <h4>Temp Checks</h4>
+                    <p>"On a scale of 1-10, putting price aside, does this solve your problem?"</p>
+                    <p>"Why not a 3 or a 4?" (if they say 8+)</p>
+                    <p>"What would make it a 10?"</p>
+                </div>
+                <div class="question-card">
+                    <h4>ADT When They Stall</h4>
+                    <p>"I get it." (Agree)</p>
+                    <p>"Sounds like you want time to think." (Duplicate)</p>
+                    <p>"Is there anything ELSE stopping you?" (Transition)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Call Flow -->
+        <div class="flow-section">
+            <h2>📞 THE COMPLETE CALL FLOW</h2>
+            <div class="flow">
+                <div class="flow-item">1. Rapport</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item">2. Frame</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item critical">3. WHY CHAIN</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item critical">4. Close Doors</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item">5. Tie Downs</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item">6. Present Offer</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item critical">7. Temp Check #1</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item">8. Stack</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item">9. Forecast</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item">10. Price + Silence</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item critical">11. Temp Check #2</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item">12. Close</div>
+                <span class="flow-arrow">→</span>
+                <div class="flow-item critical">13. ADT if needed</div>
+            </div>
+        </div>
+
+        <!-- The Fatal Mistake -->
+        <div class="fatal-box">
+            <h2>⚠️ THE FATAL MISTAKE</h2>
+            <p>Never ask: <strong>"Do you think you can do this yourself?"</strong><br><br>
+            You just gave them permission to say YES and leave.<br><br>
+            Instead: <strong>"What's been stopping you from hitting this goal so far?"</strong></p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p class="quote">"If they're not willing to push the boulder up the hill to talk about what the problems are and how they want to solve it, then are they going to do the work? We don't need to do the work for them."</p>
+            <p>— Alex Portugal</p>
+            <p class="sfa-footer-brand">SEVEN FIGURE AGENCY</p>
+            <p>Sales Training Resource | Internal Use Only</p>
+        </div>
+    </div>
+</body>
+</html>
