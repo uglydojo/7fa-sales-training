@@ -884,7 +884,7 @@
                 <div class="tier-name">Quick Wins</div>
                 <div class="tier-meta">Under 5 minutes each - warm up the blade</div>
             </div>
-            <div class="tier-count" id="count-0">0/6</div>
+            <div class="tier-count" id="count-0">0/7</div>
         </div>
         <div class="task" data-id="1" onclick="toggleTask(this)">
             <div class="checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
@@ -931,6 +931,14 @@
             <div class="task-content">
                 <div class="task-text">Post January celebration message</div>
                 <div class="task-detail">Celebrate 10 closes on Slack</div>
+            </div>
+            <div class="task-xp">+10 XP</div>
+        </div>
+        <div class="task" data-id="26" onclick="toggleTask(this)">
+            <div class="checkbox"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div class="task-content">
+                <div class="task-text">Send Diana's team the videos for ad rotation</div>
+                <div class="task-detail">Drive folder with video assets for Facebook ads</div>
             </div>
             <div class="task-xp">+10 XP</div>
         </div>
@@ -1146,7 +1154,7 @@
     <div class="celebration" id="celebration">
         <div class="celebration-kanji">&#20253;&#35500;</div>
         <div class="celebration-title">APEX LEGEND ACHIEVED</div>
-        <div class="celebration-sub">All 25 missions complete. You are the standard.</div>
+        <div class="celebration-sub">All 26 missions complete. You are the standard.</div>
     </div>
 
     <!-- WEEK CONTROLS -->
@@ -1187,14 +1195,14 @@
     const STORAGE_KEY = 'apex-missions-current';
     const HISTORY_KEY = 'apex-missions-history';
     const META_KEY = 'apex-missions-meta';
-    const TOTAL_TASKS = 25;
+    const TOTAL_TASKS = 26;
 
     const TIERS = [
-        { count: 6, id: 'count-0' },
-        { count: 3, id: 'count-1' },
-        { count: 5, id: 'count-2' },
-        { count: 4, id: 'count-3' },
-        { count: 7, id: 'count-4' }
+        { ids: [1,2,3,4,5,6,26], el: 'count-0' },
+        { ids: [7,8,9],          el: 'count-1' },
+        { ids: [10,11,12,13,14], el: 'count-2' },
+        { ids: [15,16,17,18],    el: 'count-3' },
+        { ids: [19,20,21,22,23,24,25], el: 'count-4' }
     ];
 
     const RANKS = [
@@ -1415,16 +1423,12 @@
         }
 
         // Tier counts
-        let taskIndex = 0;
         TIERS.forEach((tier) => {
             let tierDone = 0;
-            for (let j = 0; j < tier.count; j++) {
-                taskIndex++;
-                if (state[taskIndex]) tierDone++;
-            }
-            const countEl = document.getElementById(tier.id);
-            countEl.textContent = tierDone + '/' + tier.count;
-            if (tierDone === tier.count) countEl.classList.add('complete');
+            tier.ids.forEach(id => { if (state[id]) tierDone++; });
+            const countEl = document.getElementById(tier.el);
+            countEl.textContent = tierDone + '/' + tier.ids.length;
+            if (tierDone === tier.ids.length) countEl.classList.add('complete');
             else countEl.classList.remove('complete');
         });
 
