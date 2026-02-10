@@ -1,0 +1,7 @@
+# APEX Mission Board - Cloudflare Pages Functions config
+# KV namespace must be created in Cloudflare Dashboard first
+# Then replace the ID below with your actual namespace ID
+
+[[kv_namespaces]]
+binding = "APEX_BOARD"
+id = "REPLACE_WITH_YOUR_KV_NAMESPACE_ID"
