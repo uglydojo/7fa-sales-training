@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Seven Figure Agency - Brand Kit</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.7;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 20px; }
+
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 3px solid #CF1F36;
+            margin-bottom: 40px;
+        }
+        .header .brand {
+            font-size: 0.9rem;
+            letter-spacing: 6px;
+            color: #CF1F36;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        .header h1 span { color: #CF1F36; }
+        .header .subtitle {
+            color: #888;
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding-bottom: 35px;
+            border-bottom: 1px solid #222;
+        }
+        .section:last-child { border-bottom: none; }
+        .section-number {
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            color: #CF1F36;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .section p {
+            color: #ccc;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 14px;
+            margin: 16px 0;
+        }
+        .color-card {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        .color-swatch { height: 70px; width: 100%; }
+        .color-info { padding: 10px; background: #1a1a1a; }
+        .color-name { font-weight: 700; font-size: 0.85rem; margin-bottom: 2px; }
+        .color-hex { color: #888; font-size: 0.8rem; font-family: monospace; }
+
+        .do-dont-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 16px 0;
+        }
+        @media (max-width: 600px) { .do-dont-grid { grid-template-columns: 1fr; } }
+        .do-box, .dont-box { padding: 18px; border-radius: 8px; }
+        .do-box { background: rgba(46, 213, 115, 0.08); border: 1px solid rgba(46, 213, 115, 0.3); }
+        .dont-box { background: rgba(255, 107, 107, 0.08); border: 1px solid rgba(255, 107, 107, 0.3); }
+        .do-box .label { color: #2ed573; font-weight: 700; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 10px; }
+        .dont-box .label { color: #ff6b6b; font-weight: 700; font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 10px; }
+        .do-box ul, .dont-box ul { list-style: none; padding: 0; }
+        .do-box li, .dont-box li { padding: 5px 0; font-size: 0.9rem; color: #ccc; }
+        .do-box li::before { content: "✅ "; }
+        .dont-box li::before { content: "❌ "; }
+
+        .callout {
+            background: #1a1a1a;
+            border-left: 4px solid #CF1F36;
+            padding: 16px 20px;
+            margin: 16px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .callout p { color: #fff; font-weight: 600; margin-bottom: 0; }
+        .callout .sub { color: #888; font-weight: 400; font-size: 0.85rem; margin-top: 4px; }
+
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th {
+            text-align: left; padding: 10px 14px; background: #1a1a1a;
+            border: 1px solid #333; font-size: 0.85rem; letter-spacing: 1px; color: #CF1F36;
+        }
+        td { padding: 10px 14px; border: 1px solid #222; font-size: 0.9rem; color: #ccc; }
+        tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+        .highlight { color: #CF1F36; font-weight: 700; }
+
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 0;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+        .check-num {
+            background: #CF1F36;
+            color: #fff;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 30px;
+            border-top: 1px solid #222;
+        }
+        .footer .brand { font-size: 0.9rem; letter-spacing: 6px; color: #CF1F36; font-weight: 700; margin-bottom: 6px; }
+        .footer p { color: #555; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="brand">SEVEN FIGURE AGENCY</div>
+            <h1>BRAND <span>KIT</span></h1>
+            <p class="subtitle">Quick reference for ad creatives</p>
+        </div>
+
+        <!-- 1: BRAND COLORS -->
+        <div class="section">
+            <div class="section-number">01</div>
+            <h2>Brand Colors</h2>
+            <p>Three colors. That's it. <span class="highlight">Red</span>, White, and Black. Every creative should feel clean, bold, and premium.</p>
+
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #CF1F36;"></div>
+                    <div class="color-info">
+                        <div class="color-name">SFA Red</div>
+                        <div class="color-hex">#CF1F36</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #FFFFFF; border-bottom: 1px solid #333;"></div>
+                    <div class="color-info">
+                        <div class="color-name">White</div>
+                        <div class="color-hex">#FFFFFF</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #0a0a0a;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Black</div>
+                        <div class="color-hex">#0A0A0A</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-swatch" style="background: #32373C;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Dark Gray</div>
+                        <div class="color-hex">#32373C</div>
+                    </div>
+                </div>
+            </div>
+
+            <p>No pastels. No neon. No gradients. If it's not in this palette, don't use it.</p>
+        </div>
+
+        <!-- 2: VISUAL STANDARDS -->
+        <div class="section">
+            <div class="section-number">02</div>
+            <h2>Visual Standards</h2>
+
+            <div class="do-dont-grid">
+                <div class="do-box">
+                    <div class="label">DO</div>
+                    <ul>
+                        <li>Use real photos from SFA events and intensives</li>
+                        <li>Dark backgrounds with white text</li>
+                        <li>Clean, minimal layouts</li>
+                        <li>Professional, high-quality images</li>
+                        <li>One clear CTA per creative</li>
+                    </ul>
+                </div>
+                <div class="dont-box">
+                    <div class="label">DON'T</div>
+                    <ul>
+                        <li>Use AI-generated images or graphics</li>
+                        <li>Use stock photos or generic business imagery</li>
+                        <li>Use colors outside our palette</li>
+                        <li>Use script fonts, decorative fonts, or anything "playful"</li>
+                        <li>Make it look like a course launch or guru pitch</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="callout">
+                <p>The look should match our website: dark, clean, premium. Not flashy, not cheesy.</p>
+            </div>
+        </div>
+
+        <!-- 3: MESSAGING TONE -->
+        <div class="section">
+            <div class="section-number">03</div>
+            <h2>Messaging Tone</h2>
+            <p>We sound like a trusted advisor, not a guru. Confident, not hyped. Our audience is sophisticated, they've seen every pitch. We need to earn their attention.</p>
+
+            <div class="callout">
+                <p>We are a coaching and mentorship community (done-WITH-you). We are NOT a done-for-you service.</p>
+                <p class="sub">We deliver proven playbooks, strategies, and systems. Our members do the work. Never imply we do it for them.</p>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Lead With</th>
+                    <th>Avoid</th>
+                </tr>
+                <tr>
+                    <td>Specific outcomes and results</td>
+                    <td>Vague promises ("transform your business")</td>
+                </tr>
+                <tr>
+                    <td>Real pain points (take-home shrinking, wearing too many hats)</td>
+                    <td>Feature dumps (8 hours of video, 120 pages)</td>
+                </tr>
+                <tr>
+                    <td>Social proof (150+ members, $247M in results)</td>
+                    <td>Hype language (UNLOCK, 10X, CRUSH IT, GAME-CHANGER)</td>
+                </tr>
+                <tr>
+                    <td>Clear audience call-out ("agency owners doing $30K+/mo")</td>
+                    <td>Generic messaging that could apply to anyone</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 4: PRE-LAUNCH CHECKLIST -->
+        <div class="section">
+            <div class="section-number">04</div>
+            <h2>Pre-Launch Checklist</h2>
+            <p>Run every creative through this before it goes live:</p>
+
+            <div class="checklist-item"><div class="check-num">1</div><span>Uses only our brand colors (Red, White, Black, Dark Gray)?</span></div>
+            <div class="checklist-item"><div class="check-num">2</div><span>Uses real photos, not AI-generated or stock images?</span></div>
+            <div class="checklist-item"><div class="check-num">3</div><span>Clearly identifies the audience (agency owners, $30K+ MRR)?</span></div>
+            <div class="checklist-item"><div class="check-num">4</div><span>Leads with an outcome or pain point, not features?</span></div>
+            <div class="checklist-item"><div class="check-num">5</div><span>Has only ONE clear CTA?</span></div>
+            <div class="checklist-item"><div class="check-num">6</div><span>Feels premium, not cheesy or guru-ish?</span></div>
+        </div>
+
+        <!-- 5: CONTENT LIBRARY -->
+        <div class="section">
+            <div class="section-number">05</div>
+            <h2>Content Library</h2>
+            <p>Pull approved photos, videos, and content from here. This is updated monthly with fresh assets.</p>
+
+            <div class="callout">
+                <p><a href="https://docs.google.com/spreadsheets/d/11pQWCv0zsXsCLHqaHdygtFz5C7JZ_Hym4U0ju1rtf8U/edit?usp=sharing" target="_blank" style="color: #CF1F36; text-decoration: none;">7-Figure Agency Marketing Content Library &rarr;</a></p>
+                <p class="sub">Bookmark this link. Use these assets for all ad creatives.</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="brand">SEVEN FIGURE AGENCY</div>
+            <p>Brand Kit | February 2026</p>
+            <p>Internal Document</p>
+        </div>
+
+    </div>
+</body>
+</html>
